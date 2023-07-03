@@ -11,7 +11,7 @@
            let checkBox = document.getElementsByName('hobby');
            let result = '';
              for(let i=0; i < checkBox.length; i++){
-                 if(checkBox[i].checked){
+                 if(checkBox[i].checked ===true){
                       result += '['+ checkBox[i].value + ']'  //('Có thể thêm toán tử nối chuỗi')
                  } 
              }
