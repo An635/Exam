@@ -94,3 +94,26 @@
             }else{
                  text.innerHTML = 'ban da chon nua';}
 ```
+#6/LẤY GIÁ TRỊ THẺ SELECT MULTIPLE:
+```HTML
+         <h3>Chọn các mục từ danh sách dưới đây</h3>
+                < !--  multiple được bỏ vào giúp chọn nhiều mục -->
+             <select name="value" id="list" multiple onchange = "selectBox(this)">
+                <option value="con chó">con chó</option>
+                <option value="con mèo">con mèo</option>
+                <option value="con lợn">con lợn</option>
+                <option value="con gà">con gà</option>
+                <option value="con bò">con bò</option>
+            </select>
+            <p id="listText" style="color: red">Các mục được in ra</p>
+```
+```js
+        function selectBox(obj){
+            var list = obj.children;
+            var result =' ';
+            for(var i= 0; i< list.length; i++){
+                if(list[i].selected){
+                     result += '<li>' + list[i].value + '</li>'   
+                }}
+                document.getElementById('listText') = result }
+```
