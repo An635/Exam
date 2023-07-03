@@ -18,3 +18,15 @@
              alert('gia tri can tim: ' + result)
           }
 ```
+#2/BẮT SỰ KIỆN CHECKBOX:
+```HTML
+         <input type="checkbox" id="btn" value="Xem kết quả"/> click vao
+```
+```JS
+        document.getElementById('btn').onclick = function(){
+               if(this.checked == true){
+                    alert('bạn đã click thành công')
+               }else{
+                    alert('bạn đã bỏ chọn thành công')
+               }}
+```
