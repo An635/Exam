@@ -112,6 +112,7 @@
             var list = obj.children;
             var result =' ';
             for(var i= 0; i< list.length; i++){
+// thuộc tính selected được sử dụng để kiểm tra trạng thái của mỗi mục trong danh sách chọn và xác định xem chúng có được chọn hay không.
                 if(list[i].selected){
                      result += '<li>' + list[i].value + '</li>'   
                 }}
