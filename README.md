@@ -59,7 +59,7 @@
                           for(var i=0; i < check.length; i++){
                              check[i].checked = false }}
 ```
-#LẤY GIÁ TRỊ RADIO:
+#4/LẤY GIÁ TRỊ RADIO:
 ```HTML
         <input type="radio" name="gender" id="male" value="nam"/> Nam
         <input type="radio" name="gender" id="female" value="nữ"/> Nữ 
@@ -72,4 +72,25 @@
                 if(check[i].checked == true){
                     alert(check[i].value)
                 }}};
+```
+#5/BẮT SỰ KIỆN ONCHANGE CỦA THẺ SELECT:
+```HTML
+        <p>chọn giới tính</p>
+            <select id="list"  onchange="valueList(this)">
+                <option value=" ">----Lựa chọn----</option>
+                <option value="male">Nam</option>
+                <option value="female">Nữ</option>
+            </select>
+         <p style="color: blue;" id="text"></p>
+```
+```JS
+        function valueList(obj){
+            var value = obj.value;
+            var text = document.getElementById('text');
+            if(value == ' '){
+                text.innerHTML = 'Vui long chon';
+            }else if(value == male){
+                 text.innerHTML = 'Ban da chon nam';
+            }else{
+                 text.innerHTML = 'ban da chon nua';}
 ```
