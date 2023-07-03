@@ -59,3 +59,17 @@
                           for(var i=0; i < check.length; i++){
                              check[i].checked = false }}
 ```
+#LẤY GIÁ TRỊ RADIO:
+```HTML
+        <input type="radio" name="gender" id="male" value="nam"/> Nam
+        <input type="radio" name="gender" id="female" value="nữ"/> Nữ 
+        <input type="button" id="btn1" value="submit"/>
+```
+```JS
+        document.getElementById('btn1').onclick = function(){
+            var check = document.getElementsByName('gender);
+            for(let i=0; i < check.length; i++){
+                if(check[i].checked == true){
+                    alert(check[i].value)
+                }}};
+```
