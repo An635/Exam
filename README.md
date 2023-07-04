@@ -112,7 +112,8 @@
             var list = obj.children;
             var result =' ';
             for(var i= 0; i< list.length; i++){
-// thuộc tính selected được sử dụng để kiểm tra trạng thái của mỗi mục trong danh sách chọn và xác định xem chúng có được chọn hay không.
+// thuộc tính selected được sử dụng để kiểm tra trạng thái
+của mỗi mục trong danh sách chọn và xác định xem chúng có được chọn hay không.
                 if(list[i].selected){
                      result += '<li>' + list[i].value + '</li>'   
                 }}
@@ -120,17 +121,17 @@
 ```
 #7/CHUYỂN ĐỔI PHẦN TỬ CỦA 2 THẺ SELECTE MULTIPLE
 ```HTML
-         <h3>Chọn các mục từ danh sách dưới đây</h3>
-             <select multiple id="left">
-                    <option value="tin công nghệ">Tin công nghệ</option>
-                    <option value="tin thời sự">Tin thời sự</option>
-                    <option value="tin quốc tế">Tin quốc tế</option>
-                    <option value="tin thể thao">Tin thể thao</option>
-                    <option value="tin nông nghiệp">Tin nông nghiệp</option>
-            </select>
-            <input type="button" id="left-right" value="<<" onclick="leftRight(1)"/>
-            <input type="button" id="right-left" value=">>" onclick="leftRight(2)"/>
-             <select multiple id="right"></select>
+     <h3>Chọn các mục từ danh sách dưới đây</h3>
+         <select multiple id="left">
+                <option value="tin công nghệ">Tin công nghệ</option>
+                <option value="tin thời sự">Tin thời sự</option>
+                <option value="tin quốc tế">Tin quốc tế</option>
+                <option value="tin thể thao">Tin thể thao</option>
+                <option value="tin nông nghiệp">Tin nông nghiệp</option>
+        </select>
+        <input type="button" id="left-right" value="<<" onclick="leftRight(1)"/>
+        <input type="button" id="right-left" value=">>" onclick="leftRight(2)"/>
+       <select multiple id="right"></select>
 ```
 ```CSS
          select{
