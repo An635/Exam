@@ -118,3 +118,43 @@
                 }}
                 document.getElementById('listText') = result }
 ```
+#7/CHUYỂN ĐỔI PHẦN TỬ CỦA 2 THẺ SELECTE MULTIPLE
+```HTML
+         <h3>Chọn các mục từ danh sách dưới đây</h3>
+             <select multiple id="left">
+                    <option value="tin công nghệ">Tin công nghệ</option>
+                    <option value="tin thời sự">Tin thời sự</option>
+                    <option value="tin quốc tế">Tin quốc tế</option>
+                    <option value="tin thể thao">Tin thể thao</option>
+                    <option value="tin nông nghiệp">Tin nông nghiệp</option>
+            </select>
+            <input type="button" id="left-right" value="<<" onclick="leftRight(1)"/>
+            <input type="button" id="right-left" value=">>" onclick="leftRight(2)"/>
+             <select multiple id="right"></select>
+```
+```CSS
+         select{
+            padding: 10px;
+            width: 200px;
+            height: 200px;}
+         select option{
+            padding: 5px;}
+```
+```JS
+            function leftRight(type){
+                if(type === 1){
+                    var left = document.getElementById('right');
+                    var right = document.getElementById('left');
+                }else{
+                    var left = document.getElementById('right');
+                    var right = document.getElementById('left');
+                    selectCategory(left, right)}}
+                function selectCategory(left,right){
+                    var option = left.children;
+                    var result = [];
+                        for(var i =0; i <  optiom.length; i++){
+                            if(option[[i].selected){
+                                result.push(option[i])}}
+                        for(var j=0; j < result.length; i++){
+                                rightt.appendChild(result[j])}}
+```
