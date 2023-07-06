@@ -182,6 +182,22 @@
                 var numbers2 = [3,6,7,8,9];
              console.log(Math.max(...numbers1,...numbers2);
 ```
-
-
+#9/LẤY ĐỘ DÀI OBJECT:
+```JS
+             a,   var listObj = new Object();
+                    listObj['name'] = 'Hoang',
+                    listObj['id'] = 2;
+                    listObj['address'] = 'Ha Noi';
+             b, var listObj = {
+                    name: 'Hoang',
+                    id: 20,
+                    address: Ha Noi  
+                };
+                // Lấy ra object:
+                console.log(listObj);
+                // Lấy độ dài ob:
+                console.log(Object.key(listObj).length);
+```
+                
+ 
 
