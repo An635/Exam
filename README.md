@@ -261,14 +261,27 @@
 
 +**Undefined** *Biến chưa gán dữ liệu, biến chưa được khai báo*
 ***
-# 14/TÌM MIN &MÃ TRONG MẢNG:
+# 14/TÌM MIN &MAX TRONG MẢNG:
 ```JS
              var arr = [20, 40, 60,28, 49];
               var arrMax = Math.max.apply(Math, arr);
                 console.log(arrMax);
                 var arrMin = Math.min.apply(Math, arr);
                 console.log(arrMin);
-```                    
+```
+## a,Cắt mảng sử dụng thuộc tính length:
+```js
+              var result = [23,54,6,74,77,25,98,98];
+ //Giảm độ dài mảng:
+                result.length = 4;
+//Tăng độ dài mảng:
+                result.length = 10;
+//Thiết lập mảng rỗng:               
+               result.length = 0;
+//Hoặc
+                result = [];
+```
+
 # 15/SỬ DỤNG DOM TRUY VẤN HTML
 
 ## TRUY VẤN THEO ID:
