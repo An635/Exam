@@ -289,8 +289,8 @@
 //Trường hợp xóa luôn phần tử:
         result.splice(1(start),1(length))
   
-# 15/SỬ DỤNG DOM TRUY VẤN HTML
 ```
+# 15/SỬ DỤNG DOM TRUY VẤN HTML
 ## TRUY VẤN THEO ID:
 
 *var element = document.getElementById('id')*
@@ -312,3 +312,9 @@
 ## SỬ DỤNG QUERRYSELECTOR
 
 *document.querySelector('selector) *
+# 16/TẠO THÔNG BÁO CONSOLE:
+```JS
+            console.log('%cTEXT', 'PROPERTY: VALUE';
+//EXP:
+            console.log('%cStop', "color: green; font-size: 20px; font-family: san-serif;")   
+```  
