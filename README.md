@@ -228,5 +228,23 @@
                     console.log(yesterday);
 // Ngoài ra có thể sử dụng phương thức setYear(), setMonth(), setHour,Minutes,Seconds().
 ```
- 
-
+#12/TẠO SỐ NGẪU NHIÊN TRONG JS:
+```JS
+            //random 0->9;
+                Math.floor(math.random()*10);
+            //random 0->100
+                Math.floor(math.random()*101);
+            //random 1-> 10
+                Math.floor(math.random()*10) +1;
+            //random 1-> 100
+                Math.floor(math.random()*100) +1;
+//random min-max
+// Random trong phạm vi min và max không bao gồm hai số đó.
+              function getRandom (min,max){
+                    return Math.floor(Math.random()*(max-min))+1
+                }                     
+//Tạo số ngẫu nhiên trong phạm vi min - max bao gồm cả hai số đó.
+                 function getRandom2(min,max){
+                    return Math.floor(Math.random()*(max-min+1))+1
+                }
+```
