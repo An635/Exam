@@ -269,4 +269,15 @@
                 var arrMin = Math.min.apply(Math, arr);
                 console.log(arrMin);
 ```                    
-       
+#15/SỬ DỤNG DOM TRUY VẤN HTML
+###TRUY VẤN THEO ID:
+*var element = document.getElementById('id')*
+*Kết quả trả về 1 object html*
+###TRUY VẤN THEO CLASS NAME, TAG NAME, NAME:
+*var element1 = document.getElementsByClassName('class')*
+*var element2 = document.getElementsByTagName('tag')*
+*var element3 = document.getElementsByName('name')*
+*Đều trả về 1 mảng object*
+>Khi truy vấn mà trả về 1 mảng phải sử dụng vòng lặp để xử lí phần tử
+###SỬ DỤNG QUERRYSELECTOR
+*document.querySelector('selector) *
