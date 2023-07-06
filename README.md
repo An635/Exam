@@ -249,7 +249,6 @@
                 }
 ```
 #13/CÁCH ÉP KIỂU DỮ LIỆU:
-> Lí thuyết
 +**5 kiểu dữ liệu đơn giản**:  *string, number,boolean, object, function*
 +**6 kiểu dữ liệu object**:   *object, date, array, string, number, boolean*
 +**2 kiểu dữ liệu không chứa dữ liệu nào cả**:  *null, undefined*
