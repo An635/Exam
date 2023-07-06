@@ -321,10 +321,10 @@
 ## 17/TRY CATCH 
 
 >Là 1 khối lệnh dùng để bắt lỗi chương trình trong js.
->Sử dụng khi không muốn chương trình bị dừng
+>Sử dụng khi không muốn chương trình bị dừng.
 >Lỗi do người dùng nhập sai dữ liệu or người dùng thao tác bị sai.
->Tham số e trong catch chính là error object
->Trường hợp này ta sẽ sử dụng lệnh throw để quăng lỗi
+>Tham số e trong catch chính là error object.
+>Trường hợp này ta sẽ sử dụng lệnh throw để quăng lỗi.
 >throw new Error('Nội dung thông báo lỗi');
 ```js
                 try{
