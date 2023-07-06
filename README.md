@@ -253,4 +253,8 @@
 **5 kiểu dữ liệu đơn giản**:  *string, number,boolean, object, function*  
 **6 kiểu dữ liệu object**:   *object, date, array, string, number, boolean*  
 **2 kiểu dữ liệu không chứa dữ liệu nào cả**:  *null, undefined*
+**NaN** *là Number*
+**Null** *là 1 object*
+**Undefined** *Biến chưa gán dữ liệu, biến chưa được khai báo*
+> 
 ***
