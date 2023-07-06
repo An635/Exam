@@ -256,5 +256,4 @@
 **NaN** *là Number*;
 **Null** *là 1 object*;
 **Undefined** *Biến chưa gán dữ liệu, biến chưa được khai báo*;
-> 
 ***
