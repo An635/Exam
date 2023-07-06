@@ -290,7 +290,7 @@
         result.splice(1(start),1(length))
   
 # 15/SỬ DỤNG DOM TRUY VẤN HTML
-
+```
 ## TRUY VẤN THEO ID:
 
 *var element = document.getElementById('id')*
