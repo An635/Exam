@@ -222,6 +222,11 @@
             console.log(total.getHours());
             console.log(total.getSeconds());
             document.getElementById('day').innerHTML = total;
+            //Lấy ngày trước đó
+                total.setDate(total.getDate() -1);// ngày trước đó
+                var yesterday = total.getDate(); // lấy ngày trong đối tượng day
+                    console.log(yesterday);
+// Ngoài ra có thể sử dụng phương thức setYear(), setMonth(), setHour,Minutes,Seconds().
 ```
  
 
