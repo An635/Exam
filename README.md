@@ -159,3 +159,29 @@
                         for(var j=0; j < result.length; i++){
                                 rightt.appendChild(result[j])}}
 ```
+#8/TRUYỀN MẢNG VÀO HÀM:
+```JS
+//Loại thông thường:
+        var arr = [3,4,5,6,7];
+        function showArr(element){
+            console.log(element); 
+        }
+        showArr(arr);
+//Loại truyền tham số vô hạn:
+        var food = ['chicken','noodle','meat'];
+        function showFood(a,b,c){
+                console.log(a,b,c);}
+            //a,Truyền mảng thủ công:
+             showFood(food[0], food[1], food[2]);
+           //b,Truyền mang vào hàm apply:
+             showFood(null(or showFood), food);
+           //c,Cách sử dụng es6:
+              showFood(...food);
+//Tìm số lớn nhất trong mảng:
+    var numbers1 = [1,2,3,4,5];
+    var numbers2 = [3,6,7,8,9];
+ console.log(Math.max(...numbers1,...numbers2);
+```
+
+
+
