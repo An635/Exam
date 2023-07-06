@@ -212,6 +212,9 @@
                 var list1 = Object.assign(listAni, listAni1);
 ```
 #11/CÁCH LẤY NGÀY GIỜ TRONG JS:
+```html
+            <div id=day></div>;
+```
 ```JS
             var total = new Date();
             console.log(total.getFullYear());
@@ -219,9 +222,6 @@
             console.log(total.getHours());
             console.log(total.getSeconds());
             document.getElementById('day').innerHTML = total;
-```
-```html
-        <div id=day></div>;
 ```
  
 
