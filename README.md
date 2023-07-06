@@ -261,3 +261,12 @@
 
 +**Undefined** *Biến chưa gán dữ liệu, biến chưa được khai báo*
 ***
+#14/TÌM MIN &MÃ TRONG MẢNG:
+```JS
+             var arr = [20, 40, 60,28, 49];
+              var arrMax = Math.max.apply(Math, arr);
+                console.log(arrMax);
+                var arrMin = Math.min.apply(Math, arr);
+                console.log(arrMin);
+```                    
+       
