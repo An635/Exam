@@ -270,13 +270,14 @@
                 console.log(arrMin);
 ```                    
 #15/SỬ DỤNG DOM TRUY VẤN HTML
-###TRUY VẤN THEO ID:
+
+##TRUY VẤN THEO ID:
 
 *var element = document.getElementById('id')*
 
 *Kết quả trả về 1 object html*
 
-###TRUY VẤN THEO CLASS NAME, TAG NAME, NAME:
+##TRUY VẤN THEO CLASS NAME, TAG NAME, NAME:
 
 *var element1 = document.getElementsByClassName('class')*
 
@@ -288,6 +289,6 @@
 
 >Khi truy vấn mà trả về 1 mảng phải sử dụng vòng lặp để xử lí phần tử
 
-###SỬ DỤNG QUERRYSELECTOR
+##SỬ DỤNG QUERRYSELECTOR
 
 *document.querySelector('selector) *
