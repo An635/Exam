@@ -1,5 +1,5 @@
 # exam
-#1/LẤY GIÁ TRỊ CHECKBOX:
+# 1/LẤY GIÁ TRỊ CHECKBOX:
 ```HTML
     <input type="checkbox" name="hobby" value="học lập trình"/>
             <label>học lập trình</label> <br/>
@@ -18,7 +18,7 @@
              alert('gia tri can tim: ' + result)
           }
 ```
-#2/BẮT SỰ KIỆN CHECKBOX:
+# 2/BẮT SỰ KIỆN CHECKBOX:
 ```HTML
          <input type="checkbox" id="btn" value="Xem kết quả"/> click vao
 ```
@@ -30,7 +30,7 @@
                     alert('bạn đã bỏ chọn thành công')
                }}
 ```
-#3/TẠO CHECKALL:
+# 3/TẠO CHECKALL:
 ```HTML
          <table cellpadding="8" border="1">
                 <tr >
@@ -59,7 +59,7 @@
                           for(var i=0; i < check.length; i++){
                              check[i].checked = false }}
 ```
-#4/LẤY GIÁ TRỊ RADIO:
+# 4/LẤY GIÁ TRỊ RADIO:
 ```HTML
         <input type="radio" name="gender" id="male" value="nam"/> Nam
         <input type="radio" name="gender" id="female" value="nữ"/> Nữ 
@@ -73,7 +73,7 @@
                     alert(check[i].value)
                 }}};
 ```
-#5/BẮT SỰ KIỆN ONCHANGE CỦA THẺ SELECT:
+# 5/BẮT SỰ KIỆN ONCHANGE CỦA THẺ SELECT:
 ```HTML
         <p>chọn giới tính</p>
             <select id="list"  onchange="valueList(this)">
@@ -94,7 +94,7 @@
             }else{
                  text.innerHTML = 'ban da chon nua';}
 ```
-#6/LẤY GIÁ TRỊ THẺ SELECT MULTIPLE:
+# 6/LẤY GIÁ TRỊ THẺ SELECT MULTIPLE:
 ```HTML
          <h3>Chọn các mục từ danh sách dưới đây</h3>
                 < !--  multiple được bỏ vào giúp chọn nhiều mục -->
@@ -119,7 +119,7 @@
                 }}
                 document.getElementById('listText') = result }
 ```
-#7/CHUYỂN ĐỔI PHẦN TỬ CỦA 2 THẺ SELECTE MULTIPLE
+# 7/CHUYỂN ĐỔI PHẦN TỬ CỦA 2 THẺ SELECTE MULTIPLE
 ```HTML
      <h3>Chọn các mục từ danh sách dưới đây</h3>
          <select multiple id="left">
@@ -159,7 +159,7 @@
                         for(var j=0; j < result.length; i++){
                                 rightt.appendChild(result[j])}}
 ```
-#8/TRUYỀN MẢNG VÀO HÀM:
+# 8/TRUYỀN MẢNG VÀO HÀM:
 ```JS
 //Loại thông thường:
                 var arr = [3,4,5,6,7];
@@ -182,7 +182,7 @@
                 var numbers2 = [3,6,7,8,9];
              console.log(Math.max(...numbers1,...numbers2);
 ```
-#9/LẤY ĐỘ DÀI OBJECT:
+# 9/LẤY ĐỘ DÀI OBJECT:
 ```JS
              a,var listObj = new Object();
                     listObj['name'] = 'Hoang',
@@ -198,7 +198,7 @@
                 // Lấy độ dài ob:
                 console.log(Object.key(listObj).length);
 ```
-#10/GỘP 2 OBJECT LẠI VỚI NHAU:
+# 10/GỘP 2 OBJECT LẠI VỚI NHAU:
 ```JS
             var listAni = {
                     name: 'parrot', legs: 2, wings: 2, 
@@ -211,7 +211,7 @@
             //Ngoài ra còn sử dụng hàm assign() trộn 2 object:
                 var list1 = Object.assign(listAni, listAni1);
 ```
-#11/CÁCH LẤY NGÀY GIỜ TRONG JS:
+# 11/CÁCH LẤY NGÀY GIỜ TRONG JS:
 ```html
             <div id=day></div>;
 ```
@@ -228,7 +228,7 @@
                     console.log(yesterday);
 // Ngoài ra có thể sử dụng phương thức setYear(), setMonth(), setHour,Minutes,Seconds().
 ```
-#12/TẠO SỐ NGẪU NHIÊN TRONG JS:
+# 12/TẠO SỐ NGẪU NHIÊN TRONG JS:
 ```JS
             //random 0->9;
                 Math.floor(math.random()*10);
@@ -248,7 +248,7 @@
                     return Math.floor(Math.random()*(max-min+1))+1
                 }
 ```
-#13/CÁCH ÉP KIỂU DỮ LIỆU:
+# 13/CÁCH ÉP KIỂU DỮ LIỆU:
 +**5 kiểu dữ liệu đơn giản**:  *string, number,boolean, object, function*
 
 +**6 kiểu dữ liệu object**:   *object, date, array, string, number, boolean*
@@ -261,7 +261,7 @@
 
 +**Undefined** *Biến chưa gán dữ liệu, biến chưa được khai báo*
 ***
-#14/TÌM MIN &MÃ TRONG MẢNG:
+# 14/TÌM MIN &MÃ TRONG MẢNG:
 ```JS
              var arr = [20, 40, 60,28, 49];
               var arrMax = Math.max.apply(Math, arr);
@@ -269,15 +269,15 @@
                 var arrMin = Math.min.apply(Math, arr);
                 console.log(arrMin);
 ```                    
-#15/SỬ DỤNG DOM TRUY VẤN HTML
+# 15/SỬ DỤNG DOM TRUY VẤN HTML
 
-##TRUY VẤN THEO ID:
+## TRUY VẤN THEO ID:
 
 *var element = document.getElementById('id')*
 
 *Kết quả trả về 1 object html*
 
-##TRUY VẤN THEO CLASS NAME, TAG NAME, NAME:
+## TRUY VẤN THEO CLASS NAME, TAG NAME, NAME:
 
 *var element1 = document.getElementsByClassName('class')*
 
@@ -289,6 +289,6 @@
 
 >Khi truy vấn mà trả về 1 mảng phải sử dụng vòng lặp để xử lí phần tử
 
-##SỬ DỤNG QUERRYSELECTOR
+## SỬ DỤNG QUERRYSELECTOR
 
 *document.querySelector('selector) *
