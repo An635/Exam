@@ -317,4 +317,28 @@
             console.log('%cTEXT', 'PROPERTY: VALUE';
 //EXP:
             console.log('%cStop', "color: green; font-size: 20px; font-family: san-serif;")   
-```  
+```
+## 17/TRY CATCH 
+
+>Là 1 khối lệnh dùng để bắt lỗi chương trình trong js.
+>Sử dụng khi không muốn chương trình bị dừng
+>Lỗi do người dùng nhập sai dữ liệu or người dùng thao tác bị sai.
+>Tham số e trong catch chính là error object
+>Trường hợp này ta sẽ sử dụng lệnh throw để quăng lỗi
+>throw new Error('Nội dung thông báo lỗi');
+```js
+                try{
+                    // Quăng lỗi vào
+                    throw('Noi dung loi');
+                }catch (e){
+                    //Đón nhận lỗi và in ra
+                    // Vị trí này chỉ chạy ở try có quăng lỗi hoặc ở try
+                    // Sử dụng sai cú pháp
+                    console.log(e.message);
+                }finally{
+                    // Cuối cùng chạy cái này
+                    // Luôn chạy sau cùng
+                    console.log('End');
+                }
+```
+
