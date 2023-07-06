@@ -184,7 +184,7 @@
 ```
 #9/LẤY ĐỘ DÀI OBJECT:
 ```JS
-             a,   var listObj = new Object();
+             a,var listObj = new Object();
                     listObj['name'] = 'Hoang',
                     listObj['id'] = 2;
                     listObj['address'] = 'Ha Noi';
@@ -198,6 +198,19 @@
                 // Lấy độ dài ob:
                 console.log(Object.key(listObj).length);
 ```
-                
+#10/GỘP 2 OBJECT LẠI VỚI NHAU:
+```JS
+            var listAni = {
+                    name: 'parrot', legs: 2, wings: 2, 
+                };
+            var listAni1 = {
+                    address: 'jungle', bookred: 'no',fly: 'yes'
+                };
+            //Gộp object có key trùng nhau sẽ bị ghi đè.
+                var list = {...listAni, ...listAni1};
+            //Ngoài ra còn sử dụng hàm assign() trộn 2 object:
+                var list1 = Object.assign(listAni, listAni1);
+```
+  
  
 
