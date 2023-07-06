@@ -218,6 +218,10 @@
             console.log(total.getMonth()+1);
             console.log(total.getHours());
             console.log(total.getSeconds());
+            document.getElementById('day').innerHTML = total;
+```
+```html
+        <div id=day></div>;
 ```
  
 
