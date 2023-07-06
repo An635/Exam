@@ -272,7 +272,7 @@
 ## a,Cắt mảng sử dụng thuộc tính length:
 ```js
               var result = [23,54,6,74,77,25,98,98];
- //Giảm độ dài mảng:
+//Giảm độ dài mảng:
                 result.length = 4;
 //Tăng độ dài mảng:
                 result.length = 10;
@@ -281,7 +281,14 @@
 //Hoặc
                 result = [];
 ```
-
+## b,Xóa phần tử mảng
+```js
+//Trường hợp này dùng xóa phần tử của mảng chứ không xóa tổng độ dài mảng;
+//Vị trí xóa undefined
+        delete result[3];
+//Trường hợp xóa luôn phần tử:
+        result.splice(1(start),1(length))
+  
 # 15/SỬ DỤNG DOM TRUY VẤN HTML
 
 ## TRUY VẤN THEO ID:
