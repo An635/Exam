@@ -211,6 +211,13 @@
             //Ngoài ra còn sử dụng hàm assign() trộn 2 object:
                 var list1 = Object.assign(listAni, listAni1);
 ```
-  
+#11/CÁCH LẤY NGÀY GIỜ TRONG JS:
+```JS
+            var total = new Date();
+            console.log(total.getFullYear());
+            console.log(total.getMonth()+1);
+            console.log(total.getHours());
+            console.log(total.getSeconds());
+```
  
 
