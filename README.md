@@ -373,9 +373,52 @@
 + Kí tự đầu tiên chuỗi không chuyển number phương thức trả về NaN.
 > parseInt(string, radix(tham số không bắt buộc))
 > 12fjh: 12, .4444: NaN, ffdsdsh: NaN, 1234 ge fdjh: 1234.
-## f,String();
+ ## f,String();
 + Sẽ chuyển đổi giá trị của đối tượng được cung cấp thành 1 chuỗi.
 + Trả về 1 chuỗi đại diện cho giá trị đối tượng
 + Trả về kết quả tương tự như khi gọi phương thức toString();
 > String(obj) obj là đối tượng cần chuyển đổi
 > ex:12dfsd: 12, 123: 123, boolean(0): false,...
+
+## 19/NUMBER FUNCTION:
+## a,ISFINITE:
++ Có chức năng kiểm tra một giá trị có phải số hữu hạn hay không
++ Các số thực có giá trị hữu hạn
++ Trả về true thuộc kiểu Number và tương đương với 1 sồ hữu hạn
++ Kiểm tra luôn giá trị không chuyển giá trị như isFinite
+> Number.isFinite(value)
+
+## b,ISINTEGER:
++ Kiểm tra 1 giá trị có thuộc kiểu số nguyên không
++ Trả về true nếu thuộc kiểu số nguyên
+> Number.isInteger(value)
+> ex: -2,'10/3', 'fdhjs', true: false
+
+ ## c,NUMBER.ISNAN()
+ + Sẽ kiểm tra giá trị truyền vào có phải là 1 giá trị NaN(0 phải số) hay không.
+ + 1 tạo NaN:
+- Lấy 0/0
+- infinity/infinity
+- infinity.0
+- Bất kì phép toán nào đó NaN là một toán hạng
+- Chuyển đổi 1 xâu non-numeric hoặc undefined về dạng number
++ NaN thuộc kiểu number
++ Trả về false bất kì giá trị nào thuộc kiểu number
+> Number.isNaN(value)
+> ex: 123, 10/2, -4, 1/6/2017: false
+
+## d,NUMBER.TOFIXED()
++ Chuyển đổi 1 số thành kiểu chuỗi, giữ lại số chữ số thập phân do người dùng xác định
++ Số thập phân lớn hơn số truyền vào trả về null
+> number.toFixed(x); x: số thập phân mong muốn
+> 144,34234 cho fixed(2): 144,34
+
+## e,NUMBER.TOSTRING()
++ Sẽ chuyển đổi 1 số thành 1 chuỗi, ép kiểu cho giá trị truyền vào thành 1 giá trị 
+thuộc kiểu string;
+> number.toString(radix)
+> là tham số không bắt buộc 2-36 
+
+## e,NUMBER.VALUEOF()
++ Sẽ trả về giá trị gốc của số truyền vào
++ Phương thức không có giá trị truyền vào
