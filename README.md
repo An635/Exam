@@ -341,4 +341,14 @@
                     console.log('End');
                 }
 ```
+## 18/GLOBAL FUNCTION:
+## a,isFinite: 
++ Có chức năng kiểm tra 1 giá trị có phải là 1 số hữu hạn hay 1 số hợp lệ hay không.
++ Giá trị truyền vào dương, âm, giá trị NaN phương thức trả về false, true.
+> isFinite(value), value(4:true, 'hello': false);
+## b,isNaN:
++ Kiểm tra điều kiện giá trị truyền vào có phải hợp lệ hay k
++ Trả về True nếu giá trị NaN
++ Sẽ chuyển đổi tham số truyền vào thành kiểu số sau đó kiểm tra nó.
+> isNaN(value);
 
