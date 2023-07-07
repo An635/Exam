@@ -351,4 +351,31 @@
 + Trả về True nếu giá trị NaN
 + Sẽ chuyển đổi tham số truyền vào thành kiểu số sau đó kiểm tra nó.
 > isNaN(value);
-
+## c,Number()
++ Chức năng chuyển đối đối tượng thành 1 số
++ Số này đại diện cho giá trị đối tượng được cung cấp
++ Đối tượng truyền vào không chuyển thành 1 số thì NaN sẽ được trả về.
+> Number(obj); obj đối tượng cần chuyển đổi
++ exp:  obj: 12heje: NaN, Date(): 1497781501126
+## d,parseFloat()
++ Sẽ phân tích 1 chuỗi được cung cấp và trả về 1 giá trị số
++ Chuỗi bắt đầu bằng nguyên, số thập phân trả về số đó
++ Chuỗi bắt đầu khoảng trắng, phương thức sẽ loại bỏ khoảng trắng đó.
++ Chuỗi bắt đầu bằng 1 dấu chấm và theo sau 1 số tự động coi là số thập phân.
++ Nếu kí tự đầu tiên của chuỗi tryền vào không thể chuyển thành 1 số, trả về NaN.
+> parseFloat(string); string là chuỗi cần phân tích
+> 12gdh: 12, 344-334: 344, .443: 0.443, frew: NaN, ...444: NaN;
+## e,parseInt():
++ Sẽ phân tích 1 chuỗi và trả về 1 số nguyên nếu có.
++ Chỉ trả về 1 số nguyên kể cả chuỗi bắt đầu bằng 1 số thập phân
++ Nếu chuỗi được bắt đầu bằng 1 dấu chấm trả về NaN
++ Các khoảng trắng ở đầu và cuối chuỗi không ảnh hưởng đến kết quả
++ Kí tự đầu tiên chuỗi không chuyển number phương thức trả về NaN.
+> parseInt(string, radix(tham số không bắt buộc))
+> 12fjh: 12, .4444: NaN, ffdsdsh: NaN, 1234 ge fdjh: 1234.
+## f,String();
++ Sẽ chuyển đổi giá trị của đối tượng được cung cấp thành 1 chuỗi.
++ Trả về 1 chuỗi đại diện cho giá trị đối tượng
++ Trả về kết quả tương tự như khi gọi phương thức toString();
+> String(obj) obj là đối tượng cần chuyển đổi
+> ex:12dfsd: 12, 123: 123, boolean(0): false,...
