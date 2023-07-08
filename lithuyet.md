@@ -643,6 +643,141 @@ let insertedNode = parentNode.insertBefore(newNode, referenceNode);
 		                "Số liên kết trên trang : " + lenght;
 		            }
 ```
+### 33,document.normalize ()
++ Sẽ nối các đoạn text gần kề lại với nhau
+> document.normalize()
+### 34,document.scripts()
++ Sẽ trả về 1 collection tập hợp các phần tử 
+> document.scripts
+```html
+				<p id="result"></p>
+        			<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+				 function myFunction(){
+			                var lenght = document.scripts.length;
+			                document.getElementById("result").innerHTML = 
+			                "Số thẻ script trong trang là : " + lenght;
+			            }
+```
+### 35,document.querySelctor ()
++ Sẽ trả về phần từ đầu tiên trong tập hợp các kết quả tìm thấy 
+> document.querySelector(CSS selectors)
+```css
+				 #result{
+			                color: red;
+			                font-size: 20px;
+			                font-weight: bold;
+			            }
+				<ul class="freetut">
+			            <h3>Khóa học 1</h3>
+			            <h3 class="demo"> Name: PHP</h3>
+			            <h3 class="demo">Time: 48 Videos</h3>
+			            <h3 class="demo">Author: Nguyễn Văn A</h3>
+			        </ul>
+			        <p id="result"></p>
+			        <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+				 function myFunction(){
+                document.querySelector(".demo").style.color = "red";
+            }
+```
+### 36,document.querySelctorAll()
++ Trả về tất cả các phần trong tập hợp các kết quả được tìm thấy css selector
++ Là NodeList object
+>   document.querySelectorAll(CSS selectors)
+```css
+	
+				#result{
+			                color: red;
+			                font-size: 20px;
+			                font-weight: bold;
+			            }
+				<ul class="fdf">
+			            <h3>Khóa học 1</h3>
+			            <h3 class="demo"> Name: PHP</h3>
+			            <h3 class="demo">Time: 48 Videos</h3>
+			            <h3 class="demo">Author: Nguyễn Văn A</h3>
+			        </ul>
+			        <p id="result"></p>
+			        <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+				function myFunction(){
+			                var NodeObject = document.querySelectorAll(".demo");
+			                NodeObject.forEach(function(item){
+			                    item.style.color = "red";
+			                });
+			            }	
+```	
+### 37,document.removeEventListener()
++ Sẽ xóa bỏ một sự kiện đã được gán vào bởi phương thức document.addEventListener().
+> document.removeEventListener(event, function, useCapture)
+> event là một chuỗi đại diện cho sự kiện và không sử dụng tiền tố on
+```css
+					#result{
+				                color: red;
+				                font-size: 20px;
+				                font-weight: bold;
+				            }
+					<p id="result"></p>
+					<button onclick="removeHandler()">Remove event</button>
+```
+```js	
+			document.addEventListener("mousemove", myFunction);
+			    function myFunction() {
+			document.getElementById("result").innerHTML = Math.random();}
+			            function removeHandler() {
+			document.removeEventListener("mousemove", myFunction);}
+```
+### 37,document.getElementById()
++ Trả về thuộc tính id 
+> document.getElementById(elementID)
+```css
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+			function myFunction(){
+	                document.getElementById("result").style.color = "red";
+	                document.getElementById("result").style.fontSize = "20px";
+	                document.getElementById("result").style.fontWeight = "bold";
+	            }
+```
+### 38,document.getElementsByClassName()
++ Trả về tập hợp các phần tử trong trang có thuộc tính class
++ Kết quả trả về nodeList object
++ Đối tượng nodeList này đại diện cho danh sách node
++ Người dùng có thể truy cập các node bằng chỉ số
+> document.getElementsByClassName(classname)
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+			<ul class="freetut">
+		            <h3>Khóa học 1</h3>
+		            <h3 class="demo"> Name: PHP</h3>
+		            <h3 class="demo">Time: 48 Videos</h3>
+		            <h3 class="demo">Author: Nguyễn Văn A</h3>
+		        </ul>
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+		function myFunction(){
+	                var NodeObject = document.getElementsByClassName("demo");
+	                NodeObject[0].style.color = "red";
+	                NodeObject[1].style.color = "blue";
+	                NodeObject[2].style.color = "yellow";
+	            }
+```
+### 39,document.getElementsByName()
++ Trả về tập hợp các phần tử trong trang có thuộc tính name được cung cấp
++ Trả về duois dạng 1 đối tượng nodelist Object
+
 
 
 
