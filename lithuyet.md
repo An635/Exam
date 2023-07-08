@@ -193,6 +193,363 @@
   // Thực hiện chèn
 let insertedNode = parentNode.insertBefore(newNode, referenceNode);
 ```
+### 5,innerHTML 
++ Công dụng giúp lấy nội dung hoặc thiết lập nội dung cho 1 node html
+```html
+                    <div id='node'> Học js </div>
+```
+```js
+                    let node = document.getElementById('node')
+                     //Lấy nội dung
+                          let content = node.innerHTML
+                     //gán nội dung
+                              node.innerHTML = 'hfkj';  
+```
+### 7,insertAdjacentHTML
++ Chèn các node vào các vị trí xác định
++ Vị trí này được chỉ định bởi tham số hàm
+> element.insertAdjacentHTML(position, text);
+> text là 1 chuỗi string 
+> position là vị trí trèn
+```html
+                          <!-- Vị trí 1: beforebegin-->       
+                            <div id="node">
+                                <!-- Vị trí 2:afterbegin --> 
+                                <span>Học lập trình miễn phí.</span>
+                                <span>Tfdjlkfdet</span>
+                                <!-- Vị trí 3:beforeend --> 
+                            </div>
+                            <!-- Vị trí 4:afterend -->
+```
+```js
+                        let element = document.getElementById('node');
+ 
+                    // Vị trí 1: beforebegin
+                    element.insertAdjacentHTML("beforebegin", '<span>Nội dung chèn 1</span>');
+                     
+                    // Vị trí 2: afterbegin
+                    element.insertAdjacentHTML("afterbegin", '<span>Nội dung chèn 2</span>');
+                     
+                    // Vị trí 3: beforeend
+                    element.insertAdjacentHTML("beforeend", '<span>Nội dung chèn 3</span>');
+                     
+                    // Vị trí 4: afterend 
+                    element.insertAdjacentHTML("afterend", '<span>Nội dung chèn 4</span>');
+```
+### 8,nextSibling
++ là một thuộc tính của node js
++ Công dụng của nó trả về node kế tiếp node hiện tại
+>  nextNode = node.nextSibling
+> node chính là node được chỉ định
+> nextNode là node kế tiếp được trả về từ thuộc tính nextSibling
+```html
+                     <span id="value1">Value 1</span>
+                      <span id="value2">Value 2</span>
+```
+```js
+                       let node = document.getElementById('value1');
+                        let nextNode = node.nextSibling;
+                        console.log(nextNode); // #text
+```
+### 9,activeElement
++ Lựa chọn phần tử đang được focus trong tài liệu
++ Nó phụ thuộc vào con trỏ chuột của chúng ta đang focus vào tài liệu html
++ Nếu muốn thiết lập focus tói 1 thẻ html nào đó sử dụng thuộc tính phương thức
+> element.focus()
+>  document.activeElement
+> Để lấy tên của thẻ HTML mà method này trả về thì ta sử dụng thuộc tính tagName.
+> document.activeElement.tagName
+```html
+         <body onclick="myFunction()">
+                <h1>Học lập trình </h1>
+          <p>Các bạn click vào bất cứ điểm nào trên trang để tìm phần tử đang được focus</p>
+                <input type="text" value="Thẻ Input">
+                <button>Thẻ Button</button>
+                <p id="result"></p>
+            </body>
+```
+```js
+         function myFunction() {
+            var x = document.activeElement.tagName;
+            document.getElementById("result").innerHTML =
+                    "bạn đang focus vào thẻ " + x;
+        }     
+```
+### 10,document adoptNode()
++ Sẽ lấy 1 thẻ html từ 1 trang khác
++ Thẻ được lấy và tất cả thẻ con của nó sẽ bị loại bỏ ở trang cũ
++ Nếu muốn sao chép chứ không muốn loại bỏ ở trang cũ sử dụng:
+> document.importNode()
++ Nếu muốn sao chép 1 phần tử trong trang chính đó ta sử dụng phương thức
+> document.adoptNode(tag là tên thẻ muốn lấy)
+```html
+                  <iframe src="https://fdklfjsdl.com"></iframe>
+                <button onclick="myFunction()">Lấy về thẻ H1</button>
+```
+```js
+                function myFunction() {
+                var frame = document.getElementsByTagName("IFRAME")[0];
+                var h = frame.contentWindow.document.getElementsByTagName("H1")[0];
+                var x = document.adoptNode(h);
+                document.body.appendChild(x);
+    }
+```
+### 11,document archors()
++ Giúp ta lấy được tất cả thẻ a trong html
+> document.anchors
+```html
+                <a name="abcd" href="#">HTML</a>
+                  <a name="abcd" href="#">PHP</a>
+                  <a href="#">CSS</a>
+                  <a name="abcd" href="#">C#</a>
+                  <a href="#">JAVASCRIPT</a>
+                  <a name="abcd" href="#">PYTHON</a>
+                  <button onclick="myFunction()">Xem kết quả</button>
+                  <p id="result"></p>
+```
+```js
+                function myFunction(){
+                var x = document.anchors.length;
+                document.getElementById("result").innerHTML = 
+                'Số thẻ a được thiết lập thuộc tính name là ' + x;}                    
+```
+### 11,document baseURL()
++ Trả về giá về giá trị url trang web hiện tại
++ Chỉ lấy url chứ không thiết lập url cho trang được
+> let uri = document.baseURI
+```html
+                <button onclick="myFunction()">Xem kết quả</button>
+                  <p id="result"></p>
+```
+```js
+              function myFunction(){
+                var x = document.baseURI;
+                document.getElementById("result").innerHTML = 
+                'URI của trang hiện tại là: ' + x;
+            }
+```
+### 12,document baseURL()
++ Thiết lập nội dung tài liệu html cho thẻ body
+> document.body = newContent
+```html
+               <p>Đây là nội dung của trang...</p> 
+                <button onclick="myFunction()">Xem kết quả</button>
+                <p id="result"></p>
+```
+```js
+                 function myFunction(){
+                document.body.style.backgroundColor = "yellow";
+            }
+```
+### 13,document characterSet()
++ Lấy được bộ mã hóa kí tự đang sử dụng trên web
+>   document.characterSet
+>   Thuộc tính này tương đương với document.inputEncoding và document.charset.       
+```html
+             <p id="result"></p>
+        <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+           function myFunction() {
+                var x = document.characterSet;
+                document.getElementById("result").innerHTML = "characterSet hiện tại là: " + x;
+            }
+```
+### 14,document createAttribute()
++ Là 1 phương thức thuộc đối tượng document
++ createAttribute() tạo ra 1 thuộc tính, xác định tên mà chưa có bất kì giá trị nào 
++ attribute.value() thiết lập giá trị cho thuộc tính
++ element.setAttributeNode() thiết lập thuộc tính đã tạo cho 1 phần tử html
+> document.createAttribute(attributename) có thể là tên thuộc tính
++ ví dụ 
+- let id = document.createAttribute('id');
+- id.value = "result";
+### 15,document createComment()
++ Tạo ra 1 đoạn ghi chú với nội dung đã được xác định
+> document.createComment(text)
+### 16,document.createDocumentFragment()
++ Tạo 1 đối tượng node object ảo với tất cả các thuộc tính và phương thức của 1 đối tượng
+> document.createDocumentFragment()
+### 17,document.createElement()
++ Tạo 1 node với tên node xác định
+> document.createElement(nodename)
+```html  
+                         <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+                  function myFunction(){
+                var div = document.createElement("div");
+                var text = document.createTextNode("Đây là nội dung của thẻ div mới được tạo!");
+                div.appendChild(text);
+                document.body.appendChild(div);
+			}
+```
+### 18,document.createTextNode()
++ Tạo nội dung văn bản 
+>   document.createTextNode(text)
+```js
+                    <button onclick="myFunction()">Xem kết quả</button>
+                var div = document.createElement("div");
+                var text = document.createTextNode("Đây là nội dung của thẻ div mới được tạo!");
+                div.appendChild(text);
+                document.body.appendChild(div);
+			}
+```
+### 19,document.doctype()
++ Trả về loại tài liệu trang HTML dưới dạng 1 documentType object
++ Có thuộc tính name, trả về tên của tài liệu
++ Không xác định loại tại liệu sẽ trả về null
+> document.doctype
+```css
+           div {
+                color: black;
+                margin: 10px 0px;
+                text-align: center;
+                background: red;
+                width: 400px;
+                height: 50px;
+            }
+```
+```js
+                  <button onclick="myFunction()">Xem kết quả</button>
+                  function myFunction(){
+                var div = document.createElement("div");
+                var doctype = document.doctype.name;
+                var text = document.createTextNode("Loại tài liệu của trang: " + doctype);
+                div.appendChild(text);
+                document.body.appendChild(div);
+			}
+```
+### 20,document.documentElement()
++ Sẽ trả về documentElement của trang hiện tại dưới dạng một Element Object.
++ documentElement có thể hiểu như là phần tử gốc của một trang
++ Đối với các trang HTML, thuộc tính documentElement sẽ trả về đối tượng là thẻ <html>
++ Thuộc tính này chỉ có quyền đọc
+> document.documentElement
+```css
+                 div {
+                color: black;
+                margin: 10px 0px;
+                text-align: center;
+                background: yellow;
+                width: 400px;
+                height: 50px;
+            }
+```
+```js
+                function myFunction(){
+                var div = document.createElement("div");
+                var doctype = document.documentElement.nodeName;
+                var text = document.createTextNode("documentElement của trang: " + doctype);
+                div.appendChild(text);
+                document.body.appendChild(div);
+			}
+```
+### 21,document.documentMode()
++ Trả về phương thức được trình duyệt sử dụng để hiển thị trang;
++  thuộc tính này chỉ có thể sử dụng với trình duyệt IE, nếu sử dụng ở trình duyệt khác, thuộc tính sẽ trả về undefined.
+> document.documentMode
+
+### 22,document.documentURL()
++ Thiết lập hoặc trả về đường dẫn hiện tại
++ Sử dụng bất cứ trang nào
+> document.documentURI
+>  document.documentURI = locationURI
+```html
+               <div id="result"></div>
+        <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+                  function myFunction(){
+                    var location = document.documentURI;
+                    document.getElementById("result").innerHTML = location;
+			}
+```
+### 23,document.domain()
++ Trả về tên domain trang hiện tại
+> document.domain
+```css
+                    <div id="result"></div>
+                      <button onclick="myFunction()">Xem kết quả</button>
+                    div {
+                        color: red;
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin: 10px 0px;
+                        text-align: center;
+                        width: 400px;
+                        height: 50px;
+                    }
+```
+```js
+                          
+              function myFunction(){
+                var domain = document.domain;
+                document.getElementById("result").innerHTML = "Tên domain hiện tại là: " + domain;
+			}
+```
+### 24,document.embeds()
++  Một bộ chọn có các thuộc tính và phương thức như một object, nó sẽ chọn
++  lấy một tập hợp kết quả
++ Các thẻ trong tập hợp được trả về sẽ được sắp xếp theo đúng thứ tự chúng xuất hiện trên trang
++ Sử dụng thuộc tính length để lấy số phần tử nằm trong collection
+> document.embeds
+### 25,document.forms()
++ Một bộ chọn có các thuộc tính và phương thức như 1 object
+ > document.forms
+
+### 26,document.hasFocus()
++ Sẽ kiểm tra xem liệu tràn hoặc bất cứ phần tử trang nào trên trang có được focus không.
+> document.hasFocus()
+```css
+                #result{
+                                color: red;
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+```
+``` html
+                <p>Click vào bất cứ phần tử nào để focus trang</p>    
+                <form action="#" method="POST">
+                    Username: <input type="text" name="fname" placeholder="Nhập Username"><br>
+                    Email: <input type="text" name="lname" placeholder="Nhập Email">
+                </form>
+ 
+                <p id="result"></p>
+                <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+                 setInterval("myFunction()", 5);
+                    function myFunction(){
+                        var x = document.getElementById("result");
+                        if (document.hasFocus()) {
+                            x.innerHTML = "Trang đã được focus.";
+                        } else {
+                            x.innerHTML = "Trang chưa được focus.";
+                        }}
+```
+### 27,document.head()
++  Sẽ trả về phần tử head của trang tài liệu
++  Nếu có nhiều thẻ head trong trang, thẻ head đầu tiên sẽ được trả về.
+> document.head
+``` html
+                              <p id="result"></p>
+                            <button onclick="myFunction()">Xem kết quả</button
+```
+```js
+                       function myFunction(){
+                      var head = document.head;
+                      document.getElementById("result").innerHTML = "ID của thẻ head là: " + head.id;
+                  }
+```
+
+
+
+
+
+
+
+
 
 
 
