@@ -102,4 +102,97 @@
 > index là vị trí xuất hiện của kí tự cần tìm kiếm trong chuỗi.
 > var str = "Fres.not.com";
 > str.charCodeAt(0)  // 70
-> 
+## II/DOM
+### 1, appendChild 
++ Thêm một node vào vị trí cuối cùng
++ Ví dụ có 1 thẻ div trong có 10 thẻ p nếu muốn bổ sung thêm thẻ 11 dùng thuộc tính này.
++ Hàm này có 1 tham số truyền vào là 1 dom node
+> **node.appendChild(node_append)**
+```html
+                        <div id="wrapper">
+                              <p> hello everyone </p>
+                         </div>
+                        <input type ="button" value ='click' onclick ='add'>
+```
+```js
+                        function add(){
+                              var node = document.getElementById('wrapper');
+                              var p = document.createElement('p')
+                                      p.innerHTML = 'chao lan nua';
+                              node.appendChild(p);
+                        }
+// Ngoài ra, muốn bổ sung 1 đoạn text thì có thể sử dụng hàm createTextNode để tạo một text
+// text node bản chất là dom node, nó là 1 đoạn text chứ không phải thẻ html
+                        function add(){
+                              var node = document.getElementById('wrapper');
+                                var textNode = document.createTextNode('hiho')
+                              node.appendChild(textNode);
+                        }
+
+```
+
+### 2, parentElement
++ Giúp lấy được thẻ html cha của thẻ html hiện tại
++ Trả về thẻ html đang chứa thẻ hiện tại hoặc trả về null o có thẻ nào.
++ Chỉ là thuộc tính đọc, trả về 1 dom object
+> parentElement = node.parentElement;
+> node là 1 dom object, ta sử dụng hàm sau để truy vấn:
+- document.(getElementById(), tagName, className())
+```js
+// Thay đổi css color cho thẻ div
+                        let node = document.getElementById('comy');
+                           if(node.parentElement){
+                              node.parentElement.style.color ='red'
+                            }   
+```
+### 3, parentNode
++ Giúp lấy được thẻ html cha của thẻ html được chỉ định
++ Là 1 thuộc tính dom node object, nó sẽ trả về node cha của node chỉ định
+> parentNode = node.parentNode
+```html
+                    <div> <p id ='text'>fđhksjhkfd</p>
+```
+```js
+                let p = document.getElemntById('text')
+                    // lấy div trong p
+                  let div = p.parentNode; 
+```
+### 4, insertAfter(), insertBefore()
++ Hàm giúp chèn thêm các thẻ html vào sau 1 thẻ html nào đó
+```html
+              <ul> <li id='menu'>css</li> </ul> 
+              <input type = 'button' value='add' onclick = 'insertAfterMenu()'>
+```
+```js
+                    function insertAfter(newNode, existingNode) {
+                        existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling)
+                        }
+                     function insertAfterMenu(){
+                          let menu = document.getElementById('menu')
+                          let li = document.createElement('li')
+                            li.textContent = 'php';
+                              insertAfter(li, menu);
+                      }
+```
++ Hàm dùng để chèn 1 node html vào đằng trước 1 node khác
++ Phương thức được tích hợp sẵn js
+> let insertedNode = parentNode.insertBefore(newNode, referenceNode(nốt được chèn))
+```html
+                   <div id="parentElement">
+                           <span id="childElement">foo bar</span>
+                    </div>
+```
+```js
+                    // Xác định parentNode
+                   let parentNode = document.getElementById('parentElement');
+                  // Xác định referenceNode
+                   let referenceNode = document.getElementById('referenceNode');
+                  // Xác định newNode
+                      let newNode = document.createElement('span');
+                        newNode.textContent = "Bla fret";
+  // Thực hiện chèn
+let insertedNode = parentNode.insertBefore(newNode, referenceNode);
+```
+
+
+
