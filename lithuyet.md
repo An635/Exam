@@ -542,6 +542,107 @@ let insertedNode = parentNode.insertBefore(newNode, referenceNode);
                       document.getElementById("result").innerHTML = "ID của thẻ head là: " + head.id;
                   }
 ```
+### 27,document.images()
++ Sẽ trả về tập hợp các thẻ img
+> document.images
+### 28,document.implementation()
++  Sẽ trả về đối tượng DOMimplementation object
++  Một đối tượng cung cấp các phương thức,
++  Thuộc tính mà không phụ thuộc vào bất kì kiểu trang nào.
+> document.implementation
+``` html
+<p>Click để kiểm tra xem trang hiện tại có đặc tính HTML DOM 1.0 hay không</p>
+        <p id="result"></p>
+        <button onclick="myFunction()">Xem kết quả</button>
+```
+```js 
+		function myFunction() {
+	                var imp = document.implementation;
+	                var result = imp.hasFeature("HTML", "1.0") ? "Có" : "Không";
+	                document.getElementById("result").innerHTML = result;
+            }
+```
+### 29,document.importNode()
++ Sẽ lấy một node từ một trang khác và nhập trang hiện tại
++ Có thể nhập bất cứ loại thẻ nào.
+> document.importNode(node, deep)
+> node là một node từ một tài liệu khác
+> deep bắt buộc, nếu mang giá trị true thì các thẻ con trong node cũng sẽ được nhập.
+### 30,document.inputEncoding()
++ Sẽ trả về bộ mã hóa kí tự được sử dụng cho trang.
++ sẽ trả về bộ mã hóa kí tự tại thời điểm phân tích cú pháp.
++ Thuộc tính này có chức năng tương tự với document.characterSet.
+> document.inputEncoding
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+<p id="result"></p>
+<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+	 function myFunction(){
+                var charset = document.inputEncoding;
+                document.getElementById("result").innerHTML = "characterSet hiện tại là: " + charset;
+            }
+```
+### 31,document.lastModified()
++ Sẽ trả về thời gian của lần chỉnh sửa trang gần nhất
++ Thời gian trả về sẽ bao gồm các thông tin giờ, phút, giây và ngày, tháng, năm.
++ Thuộc tính này chỉ có quyền đọc(read-only), tức là người dùng sẽ không thể thiết lập giá trị cho nó.
+> document.lastModified
+```css
+					#result{
+			                color: red;
+			                font-size: 20px;
+			                font-weight: bold;
+			            }
+			<p id="result"></p>
+			        <button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+				function myFunction(){
+		                var time = document.lastModified;
+		                document.getElementById("result").innerHTML = 
+		                "Lần chỉnh sửa gần nhất vào lúc : " + time;
+		            }
+```
+### 32,document.links()
++ sẽ trả về một collection tập hợp tất cả các liên kết xuất hiện trên trang tài liệu.
++ Nếu một phần tử không có thuộc tính href nó sẽ không được chọn vào collection.
++ Các phần tử trong collection sẽ được sắp xếp theo đúng thứ tự chúng xuất hiện trên trang.
+> document.links
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+            		}
+
+			<map name="planetmap">
+			          <area href="#">Arena-1</map>
+			          <area href="#">Arena-2</map>
+			          <area href="#">Arena-3</map>
+			        </map>
+			
+			        <p>
+			          <a>HTML</a><br>
+			          <a href="/css/default.asp">CSS</a>
+			        </p>
+			        <p id="result"></p>
+			        <button onclick="myFunction()">Xem kết quả</button>
+
+```
+```js
+		
+				 function myFunction(){
+		                var lenght = document.links.length;
+		                document.getElementById("result").innerHTML = 
+		                "Số liên kết trên trang : " + lenght;
+		            }
+```
 
 
 
