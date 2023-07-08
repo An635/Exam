@@ -777,15 +777,142 @@ let insertedNode = parentNode.insertBefore(newNode, referenceNode);
 ### 39,document.getElementsByName()
 + Trả về tập hợp các phần tử trong trang có thuộc tính name được cung cấp
 + Trả về duois dạng 1 đối tượng nodelist Object
-
-
-
-
-
-
-
-
-
++ Đại diện cho danh sách node
++ Có thể sử dụng thuộc tính length xác định tổng số phần tử trong danh sách tìm được
+>  document.getElementsByName(name)
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+			<ul class="frefkdjgt">
+		            <h3>Khóa học 1</h3>
+		            <h3 class="demo"> Name: PHP</h3>
+		            <h3 class="demo">Time: 48 Videos</h3>
+		            <h3 class="demo">Author: Nguyễn Văn A</h3>
+		        </ul>
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+		function myFunction(){
+	                var NodeObject = document.getElementsByName("demo");
+	                NodeObject[0].style.color = "red";
+	                NodeObject[1].style.color = "blue";
+	                NodeObject[2].style.color = "yellow";
+            }
+```
+### 40,document.getElementsByTagName()
++ Sẽ trả về tập hợp các phần tử trong trang có tên thẻ được cung cấp khi gọi phương thức
++ trả về dưới dạng một đối tượng NodeList object.
++ Đối tượng NodeList object sẽ đại diện cho một danh sách các node,
++ Bạn có thể truyền tham số * để lấy tất cả các phần tử trên trang
++ Bạn có thể sử dụng thuộc tính length để xác định tổng số phần tử có trong danh sách tìm được
++ Cũng có thể lặp qua tất cả các phần tử để lấy thông tin cần thiết.
+> document..getElementsByTagName(tagname)
+### 41,document.readyState ()
++ Trả về trạng thái hiện tại của trang.
++ Thuộc tính này sẽ chỉ có quyền đọc( read-only)
++ Trạng thái hiện tại có thể mang một trong số các giá trị sau:
+- uninitialized - Chưa bắt đầu tải.
+- loading - Đang tải.
+- loaded - Đã tải xong.
+- interactive - đã tải xong và người dùng có thể tương tác với trang.
+- complete - Hoàn thành quá trình tải trang.
+> document.readyState
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+		function myFunction(){
+                var status = document.readyState;;
+                document.getElementById("result").innerHTML = 
+                "Trạng thái của trang : " + status;
+            }
+```
+### 42,document.title()
++ Thuộc tính title sẽ trả về hoặc thiết lập tiêu đề của trang hiện tại
+> Khi muốn trả về tiêu đề: document.title
+> Khi muốn thiết lập tiêu đề: document.title = newTitle
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+		function myFunction(){
+                document.title = "Demo title";
+                var x = document.title;
+                document.getElementById("result").innerHTML = "Tiêu đề của trang là: " + x;
+            }
+```
+### 43,document.URL ()
++ sẽ trả về đường dẫn đầy đủ của trang hiện tại,
++ nó cũng có chức năng tương tự như thuộc tính location.href
+> document.URL  
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+		 function myFunction(){
+                var x = document.URL;
+                document.getElementById("result").innerHTML = "URl của trang là: " + x;
+            }
+```
+### 44,document.write()
++ sẽ in một đoạn mã HTML, Javascript hoặc một đoạn văn bản ra màn hình cho người sử dụng.
++ Nếu phương thức write() được truyền vào một đoạn mã script, nó sẽ thực hiện đoạn mã đó sau đó mới in ra giá trị được trả về
+> document.write(exp1, exp2, exp3, ...)
+> exp1, exp2, exp3, ... là các tham số, cái sẽ được in ra màn hình.
+> Chúng sẽ được in ra theo đúng thứ tự được truyền vào.
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+			<p id="result">Đây là thẻ có id="result"</p>
+        		<button onclick="myFunction()">Xem kết quả</button>
+```
+```js
+		 function myFunction(){
+                var x = document.URL;
+                document.write( alert('Hi! everyone'), "-Hello frefdjd.net")
+            }
+```
+### 45,document.writeln()
++ Phương thức writeln() sẽ in một đoạn mã HTML, Javascript hoặc một đoạn văn bản ra màn hình cho người sử dụng. 
+> document.writeln(exp1, exp2, exp3, ...)
+> exp1, exp2, exp3, ... là các tham số, cái sẽ được in ra màn hình.
+> Chúng sẽ được in ra theo đúng thứ tự được truyền vào.
+```css
+			#result{
+		                color: red;
+		                font-size: 20px;
+		                font-weight: bold;
+		            }
+```
+```js
+			 document.writeln("Fredfjdut");
+               		 document.writeln("Fredfsds.not!");
+```
 
 
 
